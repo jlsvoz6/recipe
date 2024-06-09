@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="keywords" content="프로그래밍 기말고사">
+<title>Sea Harvest</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <!-- Category icon -->
+    <div id="category-icon">≡</div>
+
+    <!-- Sliding panel -->
+    <div id="category-panel">
+        <div class="category">squid</div>
+        <div class="category">Oyster</div>
+        <div class="category">tuna</div>
+        <div class="category">salmon</div>
+        <div class="category">pollack</div>
+    </div>
+
+    <!--내비게이션 영역-->
+    
+    <!-- Buttons -->
+    <button id="Squid" class="color-button">pizza bread</button>
+    <button id="Oyster" class="color-button">Oyster</button>
+    <button id="Tuna" class="color-button">Tuna</button>
+    <button id="Salmon" class="color-button">Salmon</button>
+    <button id="Eel" class="color-button">Eel</button>
+    <button id="Pollack" class="color-button">Pollack</button>
+
+    <script>
+        document.getElementById('category-icon').onclick = function() {
+            var panel = document.getElementById('category-panel');
+            if (panel.style.left === '-250px') {
+                panel.style.left = '0';
+            } else {
+                panel.style.left = '-250px';
+            }
+        };
+     
+        // 각 버튼에 대한 URL 매핑
+        const urls = {
+            Squid: 'http://127.0.0.1:5500/index2.html',
+            Oyster: 'https://example.com/oyster',
+            Tuna: 'https://example.com/tuna',
+            Salmon: 'https://example.com/salmon',
+            Eel: 'https://example.com/eel',
+            Pollack: 'https://example.com/pollack'
+        };
+
+        // 모든 버튼 요소를 가져오기
+        const buttons = document.querySelectorAll('.color-button');
+
+        // 각 버튼에 클릭 이벤트 추가
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const id = button.id;
+                if (urls[id]) {
+                    window.location.href = urls[id];  // 버튼 ID에 매핑된 URL로 이동
+                }
+            });
+        });
+    </script>
+</body>
+</html>
