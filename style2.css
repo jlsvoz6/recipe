@@ -1,0 +1,33 @@
+.relative-image{
+    position: relative;
+            left: 568px; 
+            top: 185px
+        
+}
+
+.relative-image {
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+#text1{
+    position: absolute;
+        left: 630px;
+        top: 40px;
+}
+
+.relative-image:hover {
+    animation: moveSides 0.5s infinite alternate;
+}
+
+@keyframes moveSides {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(-10px);
+    }
+}
