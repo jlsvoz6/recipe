@@ -1,0 +1,57 @@
+.color-button {
+    border: 0.5pt solid black; /* Add black border */
+    cursor: pointer;
+    outline: none;
+    font-family: sans-serif;
+    font-size: 48pt;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: absolute;
+    text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000; /* Add black outline to text */
+}
+
+#Oyster { background-color: #AF2225; width: 125mm; height: 44mm; top: 50px; left: 120px; }
+#Tuna { background-color: #E8762A; width: 80mm; height: 40mm; top: 400px; left: 120px; }
+#Salmon { background-color: #3B9444; width: 125mm; height: 32mm; top: 50px; right: 250px; }
+#Eel { background-color: #EFC726; width: 80mm; height: 58mm; top: 350px; right: 320px; }
+#Squid { background-color: #E26A93; width: 118mm; height: 45mm; top: 250px; left: 400px; }
+#Pollack { background-color: #307BB7; width: 126mm; height: 45mm; top: 620px; left: 700px; }
+
+/* Styles for the category icon */
+#category-icon {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: transparent;
+    border: none;
+    font-family: sans-serif;
+    font-size: 24pt;
+    cursor: pointer;
+    z-index: 1000;
+    color: black; /* Change to match the color of your background */
+}
+
+/* Styles for the sliding panel */
+#category-panel {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially hidden */
+    width: 250px;
+    height: 100%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    transition: left 0.3s;
+    z-index: 999;
+}
+
+.category {
+    font-family: sans-serif;
+    font-size: 18pt;
+    margin: 5px 0;
+    cursor: pointer;
+}
