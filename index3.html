@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="레시피소개">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #ffcc00;
+            display: flex;
+            flex-direction: column; /* 컨테이너의 자식 요소들을 세로로 배치합니다. */
+            align-items: center; /* 자식 요소들을 수직 중앙 정렬합니다. */
+            cursor: pointer; 
+        }
+
+        #popup-container {
+            display: none; 
+            position: fixed; /* 팝업을 화면에 고정시킵니다. */
+            top: 0;
+            left: 0;
+            width: 100%; /* 팝업의 너비를 화면 전체로 설정합니다. */
+            height: 100%; /* 팝업의 높이를 화면 전체로 설정합니다. */
+            background-color: rgba(0, 0, 0, 0.5); /* 반투명한 배경을 만듭니다. */
+            z-index: 999; /* 다른 요소 위에 나타나도록 설정합니다. */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #popup-container img {
+            max-width: 80%;
+            max-height: 80%;
+        } 
+
+        .container1 {
+            width: 300px; /* 상자의 너비 */
+            height: 50px; /* 상자의 높이 */
+            background-color: #ffffff; /* 흰색 배경색 */
+            border: 1px solid #000000; /* 검정색 테두리 */
+            position: absolute; /* 위치 지정 */
+            top: 250px; /* 상단 여백 50% */
+            left: 400px; /* 왼쪽 여백 50% */
+            transform: translate(-50%, -50%); /* 가운데 정렬 */
+        }
+
+        .container1 img {
+            width: 80%; /* 이미지의 너비를 부모 요소의 80%로 설정 */
+            height: auto; /* 이미지의 높이를 자동으로 조정 */
+            object-fit: contain; /* 이미지의 내용이 박스에 맞도록 조정 */
+            margin-left: 30px;
+            margin-top: 17px;
+        }
+
+        .container2 {
+            position: absolute;
+            width: 300px;
+            height: 50px;
+            background-color: white;
+            border: 1px solid black;
+            top: 425px;
+            left: 400px;
+            transform: translate(-50%, -50%);
+        }
+        
+        .container2 img {
+            width: 80%;
+            height: auto;
+            object-fit: contain;
+            margin-left: 30px;
+            margin-top: 17px;
+        }
+    
+
+        .container3 {
+            position: absolute;
+            width: 300px;
+            height: 50px;
+            background-color: white;
+            border: 1px solid black;
+            top: 600px;
+            left: 400px;
+            transform: translate(-50%, -50%);
+        }
+        
+        .container3 img {
+            width: 80%;
+            height: auto;
+            object-fit: contain;
+            margin-left: 30px;
+            margin-top: 17px;
+        }
+    
+        .container4 {
+            position: absolute;
+            width: 300px;
+            height: 50px;
+            background-color: white;
+            border: 1px solid black;
+            top: 1800px;
+            left: 1150px;
+            transform: translate(-50%, -50%);
+        }
+
+        .container4 img {
+            width: 80%;
+            height: auto;
+            object-fit: contain;
+            margin-left: 30px;
+            margin-top: 17px;
+        }
+        
+        
+
+    
+
+
+    </style>
+</head>
+
+<body>
+    <div id="pic1">
+        <a href=""><img src="images/pic1.png" alt="옥수수콘" width="200px" height="200px"></a>
+    </div>
+    <div id="pic2">
+        <img src="images/pic2.png" alt="" width="200px" height="200px">
+    </div>
+    <div id="pic3">
+        <img src="images/pic3.png" alt="" width="200px" height="200px">
+    </div>
+    <div id="pic4">
+        <img src="images/pic4.png" alt="" width="200px" height="200px">
+    </div>
+    <div id="pic5">
+        <img src="images/pic5.png" alt="" width="200px" height="200px">
+    </div>
+    <div id="pic7">
+        <img src="images/pic7.png" alt="" width="200px" height="200px">
+    </div>
+    <div id="pic7">
+        <img src="images/pic8.png" alt="" width="200px" height="200px">
+    </div>
+    <div id="pic8">
+        <img src="images/pic9.png" alt="" width="200px" height="200px">
+    </div>
+    <div id="pic9">
+        <img src="images/pic10.png" alt="" width="200px" height="200px">
+    </div>
+    <div id="pic10">
+        <img src="images/pic11.png" alt="" width="200px" height="200px">
+    </div>
+
+    <!-- 팝업 컨테이너 -->
+    <div id="popup-container">
+    <!-- 팝업 내용 -->
+    <img src="" alt="">
+    </div>
+
+    <!--작은 박스-->
+    <div class="container1"> 
+        <img src="images/boxtext.png">
+    </div>
+
+    <div class="container2"> 
+        <img src="images/btext2.png">
+    </div>
+
+    <div class="container3"> 
+        <img src="images/boxt2.png">
+    </div>
+
+    <div class="container4">
+        <a href="http://127.0.0.1:5500/index5.html">
+        <img src="images/btext3.png">
+        </a>
+    </div>
+
+    <script>
+        // 팝업 이미지를 클릭했을 때 팝업을 닫는 함수
+        function closePopup() {
+            var popup = document.getElementById("popup-container");
+            popup.style.display = "none"; // 팝업을 숨깁니다.
+        }
+
+        // 이미지를 클릭하면 팝업을 보여주는 함수
+        function showPopup() {
+            var popup = document.getElementById("popup-container");
+            var clickedImage = event.target.src; // 클릭한 이미지의 소스 URL을 가져옵니다.
+            var popupImage = popup.querySelector("img"); // 팝업 내의 이미지 요소를 가져옵니다.
+            popupImage.src = clickedImage; // 팝업 이미지에 클릭한 이미지의 소스를 설정합니다.
+            popup.style.display = "flex"; // 팝업을 보여줍니다.
+        }
+
+        // 이미지를 클릭하면 팝업을 보여주는 이벤트 리스너를 추가합니다.
+        document.querySelectorAll("#pic1 img, #pic2 img, #pic3 img, #pic4 img, #pic5 img, #pic6 img, #pic7 img, #pic8 img, #pic9 img, #pic10 img").forEach(function(image) {
+            image.addEventListener("click", showPopup);
+        });
+
+        // 팝업 배경을 클릭하면 팝업을 닫는 이벤트 리스너를 추가합니다.
+        document.getElementById("popup-container").addEventListener("click", closePopup);
+    </script>
+</body>
+</html>

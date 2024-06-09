@@ -1,0 +1,11 @@
+#pic1 {
+    position: absolute;
+    left: 167px; /* 요소를 수평 방향으로 100px 오른쪽으로 이동시킵니다. */
+    top: 56px; /* 요소를 수직 방향으로 50px 아래쪽으로 이동시킵니다. */
+}
+
+#pic2 {
+    position: absolute;
+    left: 31px;
+    top: 355px;
+}
